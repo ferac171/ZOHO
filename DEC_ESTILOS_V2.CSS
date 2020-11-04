@@ -1,7 +1,6 @@
 
     
     
-    
 
 tr , td { 
 
@@ -12,6 +11,8 @@ tr , td {
     line-height:1.5em;
     font-size:12px;
     font-family:"Segoe UI";
+    text-align: center;
+
 
     }
 
@@ -98,7 +99,7 @@ textarea{
     }
 
     select, option {
-        background: transparent;
+        background: #ffffff;
         padding: 5px;
         width:100%;
         font-size:12px;
@@ -125,7 +126,7 @@ textarea{
      table
      {         
          /*margin: 0 auto;*/
-         background-color:#ffffff;
+         background-color:#0a0a0a03;
        /* background-color:black;*/
          width:100%;
          line-height: 100%;
@@ -144,7 +145,6 @@ textarea{
         font-size:25px;
         font-family:Arial, Helvetica, sans-serif;
         padding:0px;
-        background-color:#ffffff;
         Line-height:30px;  
     }
 
@@ -156,7 +156,6 @@ textarea{
         width: 80%;
         Line-height:18px;
         padding:0px;
-        background-color:#ffffff;
     }
 
     div b3 {
@@ -165,5 +164,3 @@ textarea{
         padding:0px;
 
     }
-    
-    
