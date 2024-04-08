@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+</body>
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const FCC_NOMBRE = urlParams.get('NAME')
+const FCC_APELLIDO = urlParams.get('APE')
+const FCC_EMAIL = urlParams.get('EMAIL')
+const FCC_TELEFONO = urlParams.get('TELF')
+
+    var FCC_vcardData = `BEGIN:VCARD
+VERSION:3.0
+N:${FCC_APELLIDO};${FCC_NOMBRE};;;
+FN:${FCC_NOMBRE} ${FCC_APELLIDO}
+EMAIL;TYPE=INTERNET:${FCC_EMAIL}
+TEL;TYPE=CELL:${FCC_TELEFONO}
+END:VCARD`;
+
+    var FCC_BLOB = new Blob([FCC_vcardData], { type: 'text/vcard' });
+    var FCC_URL = window.URL.createObjectURL(FCC_BLOB);
+
+    var FCC_LINK = document.createElement("a");
+    FCC_LINK.setAttribute("href", FCC_URL);
+    FCC_LINK.setAttribute("download", "contacto.vcf");
+    FCC_LINK.style.visibility = 'hidden';
+    document.body.appendChild(FCC_LINK);
+    FCC_LINK.click();
+    document.body.removeChild(FCC_LINK);
+
+</script>
+
+</html>
